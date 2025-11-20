@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function funsaludar() {
+            x = document.getElementById("nombre").value;
+            document.getElementById("comentario").innerHTML = "Saludar a \" " + x
+            alert("hola " + x)
+        }
+    </script>
+</head>
+
+<body>
+    <form name="f" method="get" action="">
+        <table border="1" width="50%">
+            <tr>
+                <td> Valor: </td>
+                <td> <input type="text" name="nombre" id="nombre" value=""> </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" name="saludar" value="Saludar" id="saludar" onclick="funsaludar( )">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <span id="comentario"> Hola Mundo </span>
+
+    <script type="text/javascript">
+        document.getElementById("comentario").innerHTML = "Saludar a todos"
+        funsaludar()
+    </script>
+
+</body>
+
+</html>

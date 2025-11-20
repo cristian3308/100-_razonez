@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volver a Intentarlo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Space+Grotesk:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="hero">
+        <div class="hero__glow" aria-hidden="true"></div>
+        <h1>Quiero volver a intentar lo nuestro</h1>
+        <p class="hero__lead">Cada palabra es un latido que aún insiste. Preparé 100 razones para quedarnos, y la única
+            razón para dejarte ir es que no encuentro ninguna.</p>
+        <div class="hero__cta">
+            <a class="btn" href="#razones">Ver razones</a>
+            <button class="btn btn--ghost" id="randomReasonBtn">Sorpréndeme</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="status">
+            <div>
+                <p class="status__label">Razones para volver</p>
+                <p class="status__value"><span id="totalReasons">0</span> razones</p>
+            </div>
+            <div class="status__meter">
+                <div class="status__progress" id="progressFill"></div>
+            </div>
+            <p class="status__note" id="progressNote">Cada tarjeta es un recuerdo vivo.</p>
+        </section>
+
+        <section class="timeline" aria-label="Línea de tiempo de nuestro amor">
+            <div class="timeline__header">
+                <p class="timeline__intro">Momentos que siguen marcando el camino.</p>
+                <div class="timeline__nav" role="tablist">
+                    <button class="timeline__step" data-step="0" role="tab" aria-controls="timelinePanel">Comenzó
+                        todo</button>
+                    <button class="timeline__step" data-step="1" role="tab"
+                        aria-controls="timelinePanel">Distancia</button>
+                    <button class="timeline__step" data-step="2" role="tab"
+                        aria-controls="timelinePanel">Aprendizajes</button>
+                    <button class="timeline__step" data-step="3" role="tab" aria-controls="timelinePanel">Nuevo
+                        intento</button>
+                </div>
+            </div>
+            <article class="timeline__card" id="timelinePanel" role="tabpanel">
+                <p class="timeline__eyebrow" id="timelineDate"></p>
+                <h3 id="timelineTitle"></h3>
+                <p id="timelineCopy"></p>
+            </article>
+        </section>
+
+        <section id="razones" class="reasons">
+            <h2>100 razones para intentarlo otra vez</h2>
+            <p class="reasons__intro">Hice una lista con el corazón en la mano. Desliza, abre cada tarjeta y deja que
+                esta historia vuelva a respirar.</p>
+            <div class="reasons__grid" id="reasonList"></div>
+        </section>
+
+        <section class="random">
+            <h3>Guarda esta razón en tu bolsillo</h3>
+            <p id="randomReason" class="random__text">Haz clic en "Sorpréndeme" y dejaré que el destino elija una razón.
+            </p>
+        </section>
+
+        <section class="jar" aria-live="polite">
+            <div class="jar__body">
+                <div class="jar__glass">
+                    <ul class="jar__list" id="savedReasons"></ul>
+                    <div class="hearts-layer" id="heartsLayer" aria-hidden="true"></div>
+                </div>
+                <p class="jar__hint" id="jarHint">Guarda las razones que quieras releer después.</p>
+            </div>
+            <div class="jar__actions">
+                <button class="btn" id="saveReasonBtn">Guardar una razón</button>
+                <p class="jar__note">Cada clic guarda una nueva razón y libera corazones que van directo hacia ti.</p>
+            </div>
+        </section>
+
+        <section class="letgo">
+            <h2>Razones para dejarte ir</h2>
+            <div class="letgo__card">
+                <p class="letgo__quote">"La verdad… no veo ninguna. Te amo, y lo único que quisiera es poder estar
+                    contigo y arreglar lo que se rompió."</p>
+                <p class="letgo__note">Quisiera volver a hacerte sentir amado, que no te falte nada, que estemos bien.
+                    Porque lo que siento todavía es más fuerte que todo lo que podría separarnos.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>En cada línea hay una promesa nueva. — Con amor, yo.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
